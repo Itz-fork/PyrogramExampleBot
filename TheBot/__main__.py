@@ -1,4 +1,4 @@
-# ( c ) Bruh_0x
+# Copyright ( c ) Itz-fork
 # Made for beginners like me to learn some very basic things {Made with Love}
 # Me sometimes suck at coding so PR's welcome
 
