@@ -7,29 +7,36 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 # Bot will works both private & public because we don't filter chat private or group (Lol huh?)
 
-@Client.on_message(filters.command(["start", "start@Pyro_Tg_Bot"]))
+@Client.on_message(filters.command(["start", "start@nexamusicbot"]))
 async def start(_, message: Message):
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name} 😉️!</b>
+        f"""<b>Selam {message.from_user.first_name} 😉️!</b>
 
-Heya I'm Alive :)
+Merak etme çalışıyorum:)
 
-Made by **@Bruh_0x** for Noob/Beginners Like Him!
+Beni kontrol etmeye geldiğin için teşekkürler.❤️
 
-Join **@NexaBotsUpdates**""",
+Ama şu anda bakım aşamasındayım.🛠️
+
+Bitince Mükemmel Bir Bot Olacağına eminim🌟
+
+🌠İstersen geliştiricinin duyuru yapacağı AylakBot's kanalına abone olup değişiklirden ilk haberdar olan kişi olabilirsin.🌠
+ 
+ 🔥Ya da sohbet etmek istersen **@TheLucii**'in sohbet grubuna gelebilirsin.🔥
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔰️ My Updates Channel 🔰️", url="https://t.me/NexaBotsUpdates"
+                        "🔰️ Güncelleme Kanalı 🔰️", url="https://t.me/AylakXBots"
                     ),
                     InlineKeyboardButton(
-                        "⚜️ Support Group ⚜️", url="https://t.me/Nexa_bots"
+                        "⚜️ Luci'nin Mekanı ⚜️", url="https://t.me/LuciChat"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Follow On Github", url="https://github.com/Itz-fork"
+                        "👑Sahip👑", url="https://t.me/ayiak"
                     )
                 ]
             ]
@@ -39,21 +46,17 @@ Join **@NexaBotsUpdates**""",
 
 # So now let's make private only command
 
-@Client.on_message(filters.command(["repo", "repo@Pyro_Tg_Bot"]) & filters.private)
+@Client.on_message(filters.command(["repo", "repo@nexamusicbot"]) & filters.private)
 async def repo(_, message: Message):
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name} 😉️!</b>
+        f"""<b>Selam {message.from_user.first_name} 😉️!</b>
 
-Kk Click On The Below Button For The Repo :)
-
-Made by **@Bruh_0x** for Noob/Beginners Like Him!
-
-Join **@NexaBotsUpdates**""",
+🛠️Bakımdayım😣""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://github.com/Itz-fork/PyrogramExampleBot"
+                        "👑Sahip👑", url="https://t.me/ayiak"
                     )
                 ]
             ]
@@ -65,19 +68,19 @@ Join **@NexaBotsUpdates**""",
 
 # First lemme make a seperate private command for that
 
-@Client.on_message(filters.command(["testcb", "testcb@Pyro_Tg_Bot"]) & filters.private)
-async def testcb(_, message: Message):
+@Client.on_message(filters.command(["help", "helpb@nexamusicbot"]) & filters.private)
+async def help(_, message: Message):
     await message.reply_text(
-        f"""<b>Hey This is a test command!</b>
+        f"""<b>Selam {message.from_user.first_name}</b>
 
-Click On Below Button To See How Callback Works!
+😞Bakımdayım🛠️!
 
-Join **@NexaBotsUpdates**""",
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Click Me Please!", callback_data="testcallback"
+                        "👑Sahip👑", url="https://t.me/ayiak"
                     )
                 ]
             ]
@@ -85,25 +88,4 @@ Join **@NexaBotsUpdates**""",
     )
 
 
-# Callback data
-# You can replace "testcallback" with your callback name!
-# If you have big callback stuff like 100+ lines you can make a seperate py file for that! In SAME DIR.
-
-@Client.on_callback_query(filters.regex("testcallback"))
-async def testcallback(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>Congrats! You Clicked On a Calllback Button!</b>
-
-This is how callbacks works! Have a Great Day!
-
-Made with ❤️ <b>@NexaBotsUpdates</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Repo", url="https://github.com/Itz-fork/PyrogramExampleBot"
-                    )
-                ]
-            ]
-        )
-    )
+# 
